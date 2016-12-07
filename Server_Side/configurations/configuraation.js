@@ -73,7 +73,7 @@ config.key_store_location		= "/tmp/keyValStore";
 //	Chaincode
 //--------------------------------------------------------------------------------------------------------------------
 //Chaincode file location
-config.asset = "https://github.com/IBM-Blockchain/car-lease-demo/Chaincode/vehicle_code/"
+config.asset = "https://github.com/dhanendras/diamond/tree/master/Chaincode/asset_code/"
 
 //Chaincode deployed names
 config.asset_name = '2e436d1363bb9f7c00342fa3fe30eff2c303f06ed4a396a06416a5e1e488ead7edd99f337e31fc6692d785bc0d9a30e942f111caccae15e7c34de6c716f0d92a';
