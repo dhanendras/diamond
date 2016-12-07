@@ -24,5 +24,5 @@ stages:
       application: ${CF_APP}
     script: |-
       #!/bin/bash
-      cf create-service Blockchain-dh free diamond_blockchain
+      cf create-service ibm-blockchain-5-prod free diamond_blockchain
       cf push "${CF_APP}"
