@@ -10,7 +10,7 @@ var fs = require('fs')
 var map_ID = require(__dirname+"/../../../tools/map_ID/map_ID.js");
 
 
-var initial_assets = require(__dirname+"/../../../blockchain/assets1/assets/initial_assets.js");
+var initial_assets = require(__dirname+"/../../../blockchain/assets/assets/initial_assets.js");
 var send_error = false;
 var counter = 0;
 var users = [];
