@@ -33,7 +33,7 @@ var create = function()
 	tracing.create('INFO', 'Startup', 'Locating initial participants');
 
 	//Build the array of JSON objects from participants_info.js to use for registering if they don't already exist and enrolling
-	if(participants.participants_info.hasOwnProperty('regulators'))
+	if(participants.participants_info.hasOwnProperty('miners'))
 	{
 		var data = participants.participants_info;
 
