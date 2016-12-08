@@ -12,19 +12,21 @@
 /////////////////////////////////////////
 ///////////// Setup Node.js /////////////
 /////////////////////////////////////////
-let express         = require('express');
-let session         = require('express-session');
-let cookieParser     = require('cookie-parser');
-let bodyParser         = require('body-parser');
-let app             = express();
-let url             = require('url');
-let cors             = require('cors');
-let fs                 = require('fs');
-let path = require('path');
-let hfc = require('hfc');
-let tracing = require(__dirname+'/Server_Side/tools/traces/trace.js');
+var express 		= require('express');
+var session 		= require('express-session');
+var cookieParser 	= require('cookie-parser');
+var bodyParser 		= require('body-parser');
+var http 			= require('http');
+var app 			= express();
+var url 			= require('url');
+var cors 			= require('cors');
+var fs 				= require('fs');
+var path 			= require('path')
+var hfc				= require('hfc');
 
-let configFile = require(__dirname+'/Server_Side/configurations/configuration.js');
+
+var reload = require('require-reload')(require),
+ configFile = require(__dirname+'/Server_Side/configurations/configuration.js');
 
 //Our own modules
 let blocks             = require(__dirname+'/Server_Side/blockchain/blocks/blocks.js');
