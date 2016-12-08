@@ -48,7 +48,7 @@ polish.update = polishFile.update;
 polish.read = polishFile.read;
 exports.polish =polish ; 
 
-var jewellerytypeFile = require(__dirname+'/ jewellerytype/ jewellerytype.js');
+var jewellerytypeFile = require(__dirname+'/jewellerytype/jewellerytype.js');
 var jewellerytype  = {};
  jewellerytype.update = jewellerytypeFile.update;
  jewellerytype.read =  jewellerytypeFile.read;
@@ -65,7 +65,7 @@ date.update = dateFile.update;
 date.read =dateFile.read;
 exports.date = date;
 
-var stampFile = require(__dirname+'/stamp/stamp.js');
+var stampFile = require(__dirname+'/timestamp/timestamp.js');
 var stamp  = {};
 stamp.update =stampFile.update;
 stamp.read =stampFile.read;
