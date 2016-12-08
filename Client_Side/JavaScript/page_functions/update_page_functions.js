@@ -7,7 +7,7 @@ $(document).ready(function(){
 	})
 
 	$(document).on('click', '.userHldr', function(){	
-		$('.foundCars').remove();
+		$('.foundDiamonds').remove();
 		$('#loaderMessages').html('0 assets')
 		$('#loader').show();
 		$('#fade').show();		
@@ -121,7 +121,7 @@ function validate(el)
 {
 	
 	/*
-	Validation on if details have been filled in for updating a car. This is not validation on what the person is allowed to update,
+	Validation on if details have been filled in for updating a Diamond. This is not validation on what the person is allowed to update,
 	that is done within the contract on the blockchain.
 	*/
 	

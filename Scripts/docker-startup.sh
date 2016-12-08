@@ -8,5 +8,5 @@ set -ev
 while ! nc -q 1 membersrvc 7054 </dev/null; do sleep 1; done
 while ! nc -q 1 vp0 7050 </dev/null; do sleep 1; done
 
-# Start Car Lease Demo.
+# Start Diamond Lease Demo.
 node app.js

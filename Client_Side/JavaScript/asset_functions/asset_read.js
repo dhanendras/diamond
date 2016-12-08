@@ -161,7 +161,7 @@ function loadUpdateAssets()
                       if(data.polish.toLowerCase() == 'undefined' || data.polish.trim() == '') data.date = '&lt;<i>polish</i>&gt;';
                       if(data.jewellery_type.toLowerCase() == 'undefined' || data.jewellery_type.trim() == '') data.jewellery_type = '&lt;<i>polish</i>&gt;';
 				if(data.colour.toLowerCase() == 'undefined' || data.colour.trim() == '') data.colour = '&lt;<i>colour</i>&gt;';
-				$('<tr class="foundCars" ><td class="smlBrk"></td><td class="editRw" ><span class="diamondID">'+data.assetID+'</span></td><td class="editRw" colspan="2" >[<span class="diamondClarity">'+data.clarity+'</span>] <span class="diamondCut">'+data.cut+'</span> <span class="diamondDiamondat">'+data.diamondat+'</span>, <span class="diamondColour">'+data.colour+'</span>, <span
+				$('<tr class="foundDiamonds" ><td class="smlBrk"></td><td class="editRw" ><span class="diamondID">'+data.assetID+'</span></td><td class="editRw" colspan="2" >[<span class="diamondClarity">'+data.clarity+'</span>] <span class="diamondCut">'+data.cut+'</span> <span class="diamondDiamondat">'+data.diamondat+'</span>, <span class="diamondColour">'+data.colour+'</span>, <span
 class="diamondLocation">'+data.location+'</span>, <span
 class="diamondSymmetry">'+data.symmetry+'</span>, <span 
 class="diamondPolish">'+data.polish+'</span>, <span
