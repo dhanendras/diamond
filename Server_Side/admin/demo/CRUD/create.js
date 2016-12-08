@@ -101,7 +101,7 @@ function create_diamond()
 {
 	
 	var j = request.jar();
-	var str = "user=DVLA"
+	var str = "user=Kollur"
 	var cookie = request.cookie(str);
 	var url = configFile.config.app_url + '/blockchain/assets1/assets';
 	j.setCookie(cookie, url);
@@ -158,10 +158,10 @@ function transfer_created_diamonds(req, res)
 		{
 			if(prevCount != -1)
 			{
-				update_demo_status({"message":"Transfered asset "+assetIDs[counter]+"(DVLA -> "+diamonds[counter].Owners[1]+")", "counter": true})
+				update_demo_status({"message":"Transfered asset "+assetIDs[counter]+"(Kollur -> "+diamonds[counter].Owners[1]+")", "counter": true})
 			}
 			prevCount = counter;
-			transfer_diamond("DVLA", map_ID.user_to_id(diamonds[counter].Owners[1]), assetIDs[counter], 'Miner_to_Distributor', "counter")
+			transfer_diamond("Kollur", map_ID.user_to_id(diamonds[counter].Owners[1]), assetIDs[counter], 'Miner_to_Distributor', "counter")
 		}
 	}, 500)
 }

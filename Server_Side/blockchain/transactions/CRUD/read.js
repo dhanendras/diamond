@@ -83,7 +83,7 @@ function get_block(req, res, number) //Retrieves block, and retrieves transactio
 			{
 				get_block(req, res, number + 1);
 			}
-			else if (req.session.user == "DVLA")
+			else if (req.session.user == "Kollur")
 			{
 				tracing.create('EXIT', 'GET blockchain/transactions', result);
 				res.send(result);
