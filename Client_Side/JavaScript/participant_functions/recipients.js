@@ -3,7 +3,7 @@ function loadRecipients()
 	/*
 	Get all the recipients and their information which is stored on the application server. Recipients are grouped by role and
 	the role of the recipient is hard coded in the recPlural variable on each html page. e.g. recPlural = Dealerships on
-	the manufacturer.html page.
+	the distributor.html page.
 	Need the recPlural value because there is a separate file for each role on the application server so it is used to know which
 	file to get the information from.
 	*/

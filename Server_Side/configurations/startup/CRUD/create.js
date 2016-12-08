@@ -98,24 +98,24 @@ function addUser()
 {
 	var userAff = "00000";
 	
-	//mapping participant type to an integer which will be stored in the user's eCert as their affiliation. Dealerships and Leasees both map to the same affiliation as they are both seen as 'Private entities'
+	//mapping participant type to an integer which will be stored in the user's eCert as their affiliation. Dealerships and traders both map to the same affiliation as they are both seen as 'Private entities'
 	switch (users[counter].type) {
-			case "regulators": 
+			case "miners": 
 				userAff = "00001";
 				break;
-			case "manufacturers":
+			case "distributors":
 				userAff = "00002";
 				break;
 			case "dealerships":
 				userAff = "00003";
 				break;
-			case "lease_companies":
+			case "buyers":
 				userAff = "00004";
 				break;
-			case "leasees":
+			case "traders":
 				userAff = "00003";
 				break;
-			case "scrap_merchants":
+			case "Cutters":
 				userAff = "00005";
 				break;
 	}
@@ -272,7 +272,7 @@ function deploy_Diamond() //Deploy Diamond chaincode
 						      "function": "init",
 						      "args": userEcertHolder
 						    },
-						    "secureContext": participants.participants_info.regulators[0].identity
+						    "secureContext": participants.participants_info.miners[0].identity
 						  },
 						  "id": 12
 						}

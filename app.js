@@ -242,28 +242,28 @@ app.get('/blockchain/participants', function(req,res){
 	participants.read(req,res);
 });
 
-app.get('/blockchain/participants/regulators', function(req, res){
-	participants.regulators.read(req,res);
+app.get('/blockchain/participants/miners', function(req, res){
+	participants.miners.read(req,res);
 });
 
-app.get('/blockchain/participants/manufacturers', function(req, res){
-	participants.manufacturers.read(req,res);
+app.get('/blockchain/participants/distributors', function(req, res){
+	participants.distributors.read(req,res);
 });
 
 app.get('/blockchain/participants/dealerships', function(req, res){
 	participants.dealerships.read(req,res);
 });
 
-app.get('/blockchain/participants/lease_companies', function(req, res){
-	participants.lease_companies.read(req,res);
+app.get('/blockchain/participants/buyers', function(req, res){
+	participants.buyers.read(req,res);
 });
 
-app.get('/blockchain/participants/leasees', function(req, res){
-	participants.leasees.read(req,res);
+app.get('/blockchain/participants/traders', function(req, res){
+	participants.traders.read(req,res);
 });
 
-app.get('/blockchain/participants/scrap_merchants', function(req, res){
-	participants.scrap_merchants.read(req,res);
+app.get('/blockchain/participants/Cutters', function(req, res){
+	participants.Cutters.read(req,res);
 });
 
 

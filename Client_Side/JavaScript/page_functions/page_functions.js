@@ -69,7 +69,7 @@ $(document).ready(function(){
 				$('#confTxt').html('Transaction committed to the blockchain. <br /><br />'+sendDets+'<br /><br />'+recDets+': '+$('.delName').html()+' (Account '+$('.accAddr').html()+')<br /><br />assets: '+$('#selVhclsTbl tr').length)
 				
 				var data = {}; //Data to be sent
-				data.function_name= transferName; //E.g. manufacturer_to_private
+				data.function_name= transferName; //E.g. distributor_to_private
 				data.value= $('.accAddr').html(); //Recipent e.g. dealership name
 				data.assetID = assetID;
 				

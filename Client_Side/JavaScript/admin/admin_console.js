@@ -298,7 +298,7 @@ function showEditTbl()
 	
 	switch ($('#selectedType').html())
 	{
-		case "Manufacturer": 
+		case "distributor": 
 			i = 0
 			break;
 		case "Dealership": 
