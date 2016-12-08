@@ -58,7 +58,7 @@ config.peers = ['http://127.0.0.1'];
 //--------------------------------------------------------------------------------------------------------------------
 
 config.registrar_name 		= "WebAppAdmin";
-config.registrar_password 	= "1a9513992f";
+config.registrar_password 	= "18773fc7c9";
 
 //--------------------------------------------------------------------------------------------------------------------
 //	HFC configuration - Defines what protocol to use for communication, bluemix certificate location and key store location
