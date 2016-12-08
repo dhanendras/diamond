@@ -266,7 +266,7 @@ function deploy_Diamond() //Deploy Diamond chaincode
 						  "params": {
 						    "type": 1,
 						    "chaincodeID": {
-						      "path": configFile.config.Diamond
+						      "path": configFile.config.asset
 						    },
 						    "ctorMsg": {
 						      "function": "init",
