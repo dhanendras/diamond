@@ -36,17 +36,22 @@
     "url": "https://github.com/dhanendras/diamond.git"
   },
   "engines": {
-    "node": "^6.9.1",
-    "npm": "^3.10.8"
+   "node": "4.4.7",
+    "npm": "3.10.6"
   },
   "devDependencies": {
+  "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
     "gulp-concat": "*",
     "gulp-minify-css": "1.2.1",
-    "gulp-rename": "*",
-    "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "*",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
-    "gulp-watch": "^4.3.4"
+    "gulp-watch": "^4.3.4",
+    "gulp-sourcemaps": "*",
+    "gulp-rename": "*",
+    "watchify": "^3.3.1",
+    "loopback": "^2.26.2",
+    "loopback-datasource-juggler": "^2.44.0",
+    "tape": "^4.4.0"
   }
 }
