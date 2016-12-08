@@ -1,7 +1,7 @@
 /*eslint-env node */
 
 //TO DO:
-// -- Clean up vehicle chaincode and process for passing in users and eCert. Use JSON objects instead
+// -- Clean up Diamond chaincode and process for passing in users and eCert. Use JSON objects instead
 
 var request = require('request');
 var reload = require('require-reload')(require),
@@ -155,7 +155,7 @@ function addUser()
 					{
 						counter = 0;
 						tracing.create('INFO', 'Startup', "User already registered and enrolled:" + users[counter].identity);
-						get_height(function(){deploy_vehicle()});
+						get_height(function(){deploy_Diamond()});
 					}
 				}
 				else
@@ -173,7 +173,7 @@ function addUser()
 					}
 					else
 					{
-						get_height(function(){deploy_vehicle()});
+						get_height(function(){deploy_Diamond()});
 					}
 				}
 			})
@@ -192,7 +192,7 @@ function addUser()
 					{
 						counter = 0;
 						tracing.create('INFO', 'Startup', "Created and registered user:" + users[counter].identity);
-						get_height(function(){deploy_vehicle()});
+						get_height(function(){deploy_Diamond()});
 					}
 				}
 				else
@@ -210,7 +210,7 @@ function addUser()
 					}
 					else
 					{
-						get_height(function(){deploy_vehicle()});
+						get_height(function(){deploy_Diamond()});
 					}
 				}
 			})
@@ -249,10 +249,10 @@ function get_height(cb){
 	}, 5000)
 }
 
-function deploy_vehicle() //Deploy vehicle chaincode
+function deploy_Diamond() //Deploy Diamond chaincode
 {
 	configFile = reload(__dirname+'/../../configuration.js');
-	tracing.create('INFO', 'Startup', 'Deploying vehicle chaincode');
+	tracing.create('INFO', 'Startup', 'Deploying Diamond chaincode');
 
 	var api_url = configFile.config.api_ip+":"+configFile.config.api_port_internal
 
@@ -266,7 +266,7 @@ function deploy_vehicle() //Deploy vehicle chaincode
 						  "params": {
 						    "type": 1,
 						    "chaincodeID": {
-						      "path": configFile.config.vehicle
+						      "path": configFile.config.Diamond
 						    },
 						    "ctorMsg": {
 						      "function": "init",
@@ -289,7 +289,7 @@ function deploy_vehicle() //Deploy vehicle chaincode
 
 		if (body && !body.hasOwnProperty('error') && response.statusCode == 200)
 		{
-			update_config("vehicle_name",body.result.message)
+			update_config("Diamond_name",body.result.message)
 			
 			var peers = configFile.config.peers
 			var peerCounter = 0;
@@ -306,11 +306,11 @@ function deploy_vehicle() //Deploy vehicle chaincode
 				request(options, function(error, response, body){
 					if(body && body.height > parseInt(configFile.config.start_height)){
 						if(peerCounter < peers.length-1){							
-							tracing.create('INFO', 'Startup', 'Vehicle chaincode deployed on peer '+peers[peerCounter]);							
+							tracing.create('INFO', 'Startup', 'Diamond chaincode deployed on peer '+peers[peerCounter]);							
 							peerCounter++										
 						}
 						else{
-							tracing.create('INFO', 'Startup', 'Vehicle chaincode deployed on all peers');
+							tracing.create('INFO', 'Startup', 'Diamond chaincode deployed on all peers');
 							clearInterval(interval)
 						}
 					}
@@ -319,8 +319,8 @@ function deploy_vehicle() //Deploy vehicle chaincode
 		}
 		else
 		{
-			tracing.create('ERROR', 'Startup', {"message":"Error deploying vehicle chaincode","body":body,"error":true});
-			return JSON.stringify({"message":"Error deploying vehicle chaincode","body":body,"error":true})
+			tracing.create('ERROR', 'Startup', {"message":"Error deploying Diamond chaincode","body":body,"error":true});
+			return JSON.stringify({"message":"Error deploying Diamond chaincode","body":body,"error":true})
 		}
 	})
 }

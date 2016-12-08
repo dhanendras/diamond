@@ -54,7 +54,7 @@ var read = function (req,res)
 		if (!error && response.statusCode == 200)
 		{
 			var result = {}
-			result.vehicle = JSON.parse(body.result.message);
+			result.Diamond = JSON.parse(body.result.message);
 			tracing.create('EXIT', 'GET blockchain/assets1/assets/asset/'+assetID, result);
 			res.send(result.asset)
 		}

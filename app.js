@@ -31,8 +31,8 @@ let blocks             = require(__dirname+'/Server_Side/blockchain/blocks/block
 let block             = require(__dirname+'/Server_Side/blockchain/blocks/block/block.js');
 let participants     = require(__dirname+'/Server_Side/blockchain/participants/participants.js');
 let identity          = require(__dirname+'/Server_Side/admin/identity/identity.js');
-let assets         = require(__dirname+'/Server_Side/blockchain/assets/assets.js');
-let vehicle          = require(__dirname+'/Server_Side/blockchain/assets/assets/vehicle/vehicle.js');
+let assets         = require(__dirname+'/Server_Side/blockchain/assets/assets/assets.js');
+let Diamond          = require(__dirname+'/Server_Side/blockchain/assets/assets/Diamond/Diamond.js');
 let demo              = require(__dirname+'/Server_Side/admin/demo/demo.js');
 let chaincode          = require(__dirname+'/Server_Side/blockchain/chaincode/chaincode.js');
 let transactions     = require(__dirname+'/Server_Side/blockchain/transactions/transactions.js');
@@ -116,105 +116,105 @@ app.get('/blockchain/assets/assets' , function(req,res, next)
 });
 
 //-----------------------------------------------------------------------------------------------
-//    Blockchain - Assets - assets - Vehicle
+//    Blockchain - Assets - assets - Diamond
 //-----------------------------------------------------------------------------------------------
 
 app.get('/blockchain/assets/assets/:v5cID' , function(req,res,next)
 {
-    vehicle.read(req,res,next,usersToSecurityContext);
+    Diamond.read(req,res,next,usersToSecurityContext);
 });
 
 //-----------------------------------------------------------------------------------------------
-//    Blockchain - Assets - assets - Vehicle - Owner
+//    Blockchain - Assets - assets - Diamond - Owner
 //-----------------------------------------------------------------------------------------------
 app.get('/blockchain/assets/assets/:v5cID/owner' , function(req,res,next)
 {
-    vehicle.owner.read(req,res,next,usersToSecurityContext);
+    Diamond.owner.read(req,res,next,usersToSecurityContext);
 });
 
 app.put('/blockchain/assets/assets/:v5cID/owner' , function(req,res,next)
 {
-    vehicle.owner.update(req,res,next,usersToSecurityContext);
+    Diamond.owner.update(req,res,next,usersToSecurityContext);
 });
 
 //-----------------------------------------------------------------------------------------------
-//    Blockchain - Assets - assets - Vehicle - VIN
+//    Blockchain - Assets - assets - Diamond - VIN
 //-----------------------------------------------------------------------------------------------
 app.get('/blockchain/assets/assets/:v5cID/VIN' , function(req,res,next)
 {
-    vehicle.VIN.read(req,res,next,usersToSecurityContext);
+    Diamond.VIN.read(req,res,next,usersToSecurityContext);
 });
 
 app.put('/blockchain/assets/assets/:v5cID/VIN' , function(req,res,next)
 {
-    vehicle.VIN.update(req,res,next,usersToSecurityContext);
+    Diamond.VIN.update(req,res,next,usersToSecurityContext);
 });
 
 //-----------------------------------------------------------------------------------------------
-//    Blockchain - Assets - assets - Vehicle - Colour
+//    Blockchain - Assets - assets - Diamond - Colour
 //-----------------------------------------------------------------------------------------------
 app.get('/blockchain/assets/assets/:v5cID/colour' , function(req,res,next)
 {
-    vehicle.colour.read(req,res,next,usersToSecurityContext);
+    Diamond.colour.read(req,res,next,usersToSecurityContext);
 });
 
 app.put('/blockchain/assets/assets/:v5cID/colour' , function(req,res,next)
 {
-    vehicle.colour.update(req,res,next,usersToSecurityContext);
+    Diamond.colour.update(req,res,next,usersToSecurityContext);
 });
 
 
 //-----------------------------------------------------------------------------------------------
-//    Blockchain - Assets - assets - Vehicle - Make
+//    Blockchain - Assets - assets - Diamond - Make
 //-----------------------------------------------------------------------------------------------
 app.get('/blockchain/assets/assets/:v5cID/make' , function(req,res,next)
 {
-    vehicle.make.read(req,res,next,usersToSecurityContext);
+    Diamond.make.read(req,res,next,usersToSecurityContext);
 });
 
 app.put('/blockchain/assets/assets/:v5cID/make' , function(req,res,next)
 {
-    vehicle.make.update(req,res,next,usersToSecurityContext);
+    Diamond.make.update(req,res,next,usersToSecurityContext);
 });
 
 //-----------------------------------------------------------------------------------------------
-//    Blockchain - Assets - assets - Vehicle - Model
+//    Blockchain - Assets - assets - Diamond - Model
 //-----------------------------------------------------------------------------------------------
 app.get('/blockchain/assets/assets/:v5cID/model' , function(req,res,next)
 {
-    vehicle.model.read(req,res,next,usersToSecurityContext);
+    Diamond.model.read(req,res,next,usersToSecurityContext);
 });
 
 app.put('/blockchain/assets/assets/:v5cID/model' , function(req,res,next)
 {
-    vehicle.model.update(req,res,next,usersToSecurityContext);
+    Diamond.model.update(req,res,next,usersToSecurityContext);
 });
 
 //-----------------------------------------------------------------------------------------------
-//    Blockchain - Assets - assets - Vehicle - Reg
+//    Blockchain - Assets - assets - Diamond - Reg
 //-----------------------------------------------------------------------------------------------
 app.get('/blockchain/assets/assets/:v5cID/reg' , function(req,res,next)
 {
-    vehicle.reg.read(req,res,next,usersToSecurityContext);
+    Diamond.reg.read(req,res,next,usersToSecurityContext);
 });
 
 app.put('/blockchain/assets/assets/:v5cID/reg' , function(req,res,next)
 {
 
-    vehicle.reg.update(req,res,next,usersToSecurityContext);
+    Diamond.reg.update(req,res,next,usersToSecurityContext);
 });
 
 //-----------------------------------------------------------------------------------------------
-//    Blockchain - Assets - assets - Vehicle - Scrapped
+//    Blockchain - Assets - assets - Diamond - Scrapped
 //-----------------------------------------------------------------------------------------------
 app.delete('/blockchain/assets/assets/:v5cID' , function(req,res,next)
 {
-    vehicle.delete(req,res,next,usersToSecurityContext);
+    Diamond.delete(req,res,next,usersToSecurityContext);
 });
 
 app.get('/blockchain/assets/assets/:v5cID/scrap' , function(req,res,next)
 {
-    vehicle.scrapped.read(req,res,next,usersToSecurityContext);
+    Diamond.scrapped.read(req,res,next,usersToSecurityContext);
 });
 
 //-----------------------------------------------------------------------------------------------
@@ -329,7 +329,7 @@ chain.setKeyValStore(hfc.newFileKeyValStore(configFile.config.key_store_location
 //Retrieve the certificate if grpcs is being used
 if(configFile.config.hfcProtocol === 'grpcs'){
     // chain.setECDSAModeForGRPC(true);
-    pem = fs.readFileSync(__dirname+'/Chaincode/src/vehicle_code/'+configFile.config.certificate_file_name, 'utf8');
+    pem = fs.readFileSync(__dirname+'/Chaincode/src/Diamond_code/'+configFile.config.certificate_file_name, 'utf8');
 }
 
 
@@ -425,7 +425,7 @@ startup.enrollRegistrar(chain, configFile.config.registrar_name, webAppAdminPass
     if (!exists) {
         let certPath = (vcapServices) ? vcapServices.cert_path : '/certs/peer/cert.pem';
         chain.getEventHub().connect();
-        return startup.deployChaincode(registrar, 'vehicle_code', 'Init', [], certPath);
+        return startup.deployChaincode(registrar, 'Diamond_code', 'Init', [], certPath);
     } else {
         tracing.create('INFO', 'Startup', 'Chaincode already deployed');
         return {'chaincodeID': chaincodeID};

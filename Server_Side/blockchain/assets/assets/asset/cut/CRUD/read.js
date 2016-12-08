@@ -29,7 +29,7 @@ var read = function (req,res)
 												"name": configFile.config.asset_name
 											},
 											"ctorMsg": {
-											  "function": "get_vehicle_details",
+											  "function": "get_Diamond_details",
 											  "args": [
 											  		assetID
 											  ]

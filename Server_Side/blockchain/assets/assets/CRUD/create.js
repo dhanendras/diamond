@@ -124,7 +124,7 @@ function checkIfAlreadyExists(req, res, assetID)
 function createAsset(req, res, assetID)
 {
 	configFile = reload(__dirname+'/../../../../configurations/configuration.js');
-	tracing.create('INFO', 'POST blockchain/assets/assets', "Creating vehicle with v5cID: "+v5cID);
+	tracing.create('INFO', 'POST blockchain/assets/assets', "Creating Diamond with v5cID: "+v5cID);
 	res.write(JSON.stringify({"message":"Creating asset with assetID: "+ assetID})+'&&');
 									
 	var invokeSpec = {
@@ -136,7 +136,7 @@ function createAsset(req, res, assetID)
 						      "name": configFile.config.asset_name
 						    },
 						    "ctorMsg": {
-						      "function": "asset_vehicle",
+						      "function": "asset_Diamond",
 						      "args": [
 						        assetID
 						      ]

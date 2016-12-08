@@ -77,7 +77,7 @@ function createAsset()
                 $('#latestSpan').html('&nbsp;&#10004');
                 $('#loaderMessages').append('<br /><br /><span id="okTransaction" onclick="confTrans();">OK</span>');
                 $('#chooseConfHd').html('<span>Creation Complete</span>');
-                $('#confTxt').html('Created Vehicle: '+ JSON.parse(array[array.length - 1]).v5cID);
+                $('#confTxt').html('Created Diamond: '+ JSON.parse(array[array.length - 1]).v5cID);
             }
         }
     };

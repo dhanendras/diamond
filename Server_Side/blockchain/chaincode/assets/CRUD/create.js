@@ -7,7 +7,7 @@ var tracing = require(__dirname+'/../../../../tools/traces/trace.js');
 var crypto = require('crypto');
 
 /*
-Used to manually deploy vehicle chaincode.
+Used to manually deploy Diamond chaincode.
 Not used for Bluemix demo which instead uses "\Server_Side\configurations\startup\CRUD\create.js" to automatically deploy chaincode.
 */
 function deploy(req, res)
