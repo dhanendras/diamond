@@ -58,7 +58,7 @@ $(document).ready(function(){
 
 			$('#loader').show();
 
-			var carDets = [];
+			var diamondDets = [];
 		
 			$("#selVhclsTbl tr").each(function() 
 			{
@@ -77,7 +77,7 @@ $(document).ready(function(){
 				
 			});
 			
-			transferAssets(carDets);
+			transferAssets(diamondDets);
 				
 		}
 		else if(!($('#selDiamondsTbl tr').length <= 1))
