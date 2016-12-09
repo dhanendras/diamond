@@ -180,6 +180,8 @@ console.log("buddha", userSpec)
 		}
 		else	// Runs if user hasn't been created yet
 		{
+			console.log("creating user====", users[counter].identity)
+	
 			var result = createUser(users[counter].identity, 1, userAff, function(err){
 				if (!err) {
 					if(counter < users.length - 1)
@@ -341,6 +343,8 @@ function createUser(username, role, aff, cb)
 		if (err) {
 			if(createCounter < 5){
 				createCounter++
+				console.log("error creating user====", err)
+	
 				setTimeout(function(){createUser(username, role, aff, cb)}, 500);
 			}
 			else{
@@ -348,7 +352,8 @@ function createUser(username, role, aff, cb)
 				return cb(err);
 			}
 		} else{
-
+			console.log("created user====", username)
+	
 			chain.getMember(username, function(err, member){
 
 				member.setAccount("group1")
