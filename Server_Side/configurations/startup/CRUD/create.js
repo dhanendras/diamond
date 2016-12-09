@@ -136,7 +136,7 @@ console.log("buddha", userSpec)
 	request(options, function(error, response, body)
 	{	
 	
-		console.log("INITIAL LOGIN ATTEMPT", body)
+		console.log("INITIAL LOGIN ATTEMPT====", body)
 	
 		if(body && body.hasOwnProperty("OK"))	// Runs if user was already created will return ok if they exist with CA whether they are logged in or not
 		{
