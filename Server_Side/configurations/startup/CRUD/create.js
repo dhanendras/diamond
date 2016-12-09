@@ -124,7 +124,7 @@ function addUser()
 		"enrollId": users[counter].identity,
 		"enrollSecret": users[counter].password
 	}
-
+console.log("buddha", userSpec)
 	//Initial check to see if the user is already registered with the CA
 	var options = 	{
 						url: configFile.config.api_ip+':'+configFile.config.api_port_external+'/registrar',
