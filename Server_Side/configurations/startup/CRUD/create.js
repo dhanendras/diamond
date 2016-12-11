@@ -81,11 +81,16 @@ var create = function()
 	chain.enroll(registrar_name, registrar_password, function(err, registrar) {
 		
 		if (!err){
+			console.log("no error in enrollment")
+	
 			// Successfully enrolled registrar and set this user as the chain's registrar which is authorized to register other users.
 			tracing.create('INFO', 'Startup', 'Registrar enroll worked with user ' + registrar_name);
 			chain.setRegistrar(registrar);
 		} 
 		else{
+			console.log(" error in enrollment",err)
+	
+			
 			tracing.create('INFO', 'Startup', 'Failed to register using HFC, user may have already been enrolled. '+err);
 		}
 		

@@ -1,3 +1,4 @@
+---
 applications:
 - disk_quota: 1024M
   name: diamond_blockchain-1

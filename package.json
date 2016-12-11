@@ -1,9 +1,9 @@
 {
   "name": "diamond_blockchain",
-  "version": "0.7.3",
+  "version": "0.0.1",
   "description": "A Node.js web application that demonstrates utilizing IBM Blockchain JS to call REST APIs on the blockchain.",
   "main": "app.js",
-  "licence": "Apache-2.0",
+  
   "scripts": {
     "start": "node app.js"
   },
